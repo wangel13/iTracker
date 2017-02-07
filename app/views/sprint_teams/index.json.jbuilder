@@ -1,0 +1,1 @@
+json.array! @sprint_teams, partial: 'sprint_teams/sprint_team', as: :sprint_team

@@ -1,0 +1,1 @@
+json.partial! "sprint_teams/sprint_team", sprint_team: @sprint_team

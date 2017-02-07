@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Priorities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @priorities.each do |priority| %>
+      <tr>
+        <td><%= priority.description %></td>
+        <td><%= link_to 'Show', priority %></td>
+        <td><%= link_to 'Edit', edit_priority_path(priority) %></td>
+        <td><%= link_to 'Destroy', priority, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Priority', new_priority_path %>

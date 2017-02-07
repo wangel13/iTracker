@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @user.lastname %>
+</p>
+
+<p>
+  <strong>Work hours:</strong>
+  <%= @user.work_hours %>
+</p>
+
+<h2>Tasks</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>Epic</th>
+      <th>Header</th>
+      <th>Body</th>
+      <th>Assigned to</th>
+      <th>Is trash</th>
+      <th>Estimate</th>
+      <th>Remaining estimate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.tasks.each do |task| %>
+      <tr>
+        <td><%= task.status.description %></td>
+        <td><%= task.priority.description %></td>
+        <td><%= task.epic.description %></td>
+        <td><%= task.header %></td>
+        <td><%= task.is_trash %></td>
+        <td><%= task.estimate %></td>
+        <td><%= task.remaining_estimate %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

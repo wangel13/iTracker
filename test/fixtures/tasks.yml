@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: one
+  priority: one
+  epic: one
+  header: MyString
+  body: MyText
+  assigned_to: one
+  is_trash: false
+  estimate: 2017-02-08 01:21:54
+  remaining_estimate: 2017-02-08 01:21:54
+
+two:
+  status: two
+  priority: two
+  epic: two
+  header: MyString
+  body: MyText
+  assigned_to: two
+  is_trash: false
+  estimate: 2017-02-08 01:21:54
+  remaining_estimate: 2017-02-08 01:21:54

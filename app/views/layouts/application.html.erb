@@ -9,6 +9,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <ul class="nav nav-pills justify-content-center">
+        <a class="nav-link <%= controller_name == "tasks" ? " active" : "" %>" href="/tasks">Tasks<span class="badge badge-default"><%= Task.count %></span></a>
+        <a class="nav-link <%= controller_name == "users" ? " active" : "" %>" href="/users">Users</a>
+        <a class="nav-link <%= controller_name == "sprints" ? " active" : "" %>" href="/sprints">Sprints</a>
+        <a class="nav-link <%= controller_name == "sprint_teams" ? " active" : "" %>" href="/sprint_teams">SprintsTeams</a>
+        <a class="nav-link <%= controller_name == "team_users" ? " active" : "" %>" href="/team_users">Team users</a>
+        <a class="nav-link <%= controller_name == "epics" ? " active" : "" %>" href="/epics">Epics</a>
+        <a class="nav-link <%= controller_name == "teams" ? " active" : "" %>" href="/teams">Teams</a>
+        <a class="nav-link <%= controller_name == "statuses" ? " active" : "" %>" href="/statuses">Statuses</a>
+        <a class="nav-link <%= controller_name == "priorities" ? " active" : "" %>" href="/priorities">Priorities</a>
+      </ul>
+      <%= yield %>
+    </div>
   </body>
 </html>

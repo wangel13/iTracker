@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @task.status %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @task.priority %>
+</p>
+
+<p>
+  <strong>Epic:</strong>
+  <%= @task.epic %>
+</p>
+
+<p>
+  <strong>Header:</strong>
+  <%= @task.header %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @task.body %>
+</p>
+
+<p>
+  <strong>Assigned to:</strong>
+  <%= @task.assigned_to %>
+</p>
+
+<p>
+  <strong>Is trash:</strong>
+  <%= @task.is_trash %>
+</p>
+
+<p>
+  <strong>Estimate:</strong>
+  <%= @task.estimate %>
+</p>
+
+<p>
+  <strong>Remaining estimate:</strong>
+  <%= @task.remaining_estimate %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>

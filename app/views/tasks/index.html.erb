@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>Priority</th>
+      <th>Epic</th>
+      <th>Header</th>
+      <th>Assigned to</th>
+      <th>Is trash</th>
+      <th>Estimate</th>
+      <th>Remaining estimate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.status.description %></td>
+        <td><%= task.priority.description %></td>
+        <td><%= task.epic.description %></td>
+        <td><%= task.header %></td>
+        <td><%= link_to task.assigned_to.name, task.assigned_to %></td>
+        <td><%= task.is_trash %></td>
+        <td><%= task.estimate %></td>
+        <td><%= task.remaining_estimate %></td>
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Task', new_task_path %>
