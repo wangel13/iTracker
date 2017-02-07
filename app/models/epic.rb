@@ -1,0 +1,2 @@
+class Epic < ApplicationRecord
+end
