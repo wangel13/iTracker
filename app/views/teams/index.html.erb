@@ -2,11 +2,12 @@
 
 <h1>Teams</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Description</th>
       <th>Team hours</th>
+      <th>Users</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= team.description %></td>
         <td><%= team.team_hours %></td>
+        <td><%= team.users.count %></td>
         <td><%= link_to 'Show', team %></td>
         <td><%= link_to 'Edit', edit_team_path(team) %></td>
         <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
